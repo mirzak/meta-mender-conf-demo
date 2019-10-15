@@ -1,0 +1,29 @@
+From 9c41836b494f27ddfba6326abbbd7bbeda78718e Mon Sep 17 00:00:00 2001
+From: Mirza Krak <mirza.krak@northern.tech>
+Date: Tue, 15 Oct 2019 13:31:37 +0200
+Subject: [PATCH 4/4] configs: colibri_imx7_emmc: change video mode to 800x480
+
+This is the resolution used by U-Boot and this matches the
+resestive touch display
+
+Signed-off-by: Mirza Krak <mirza.krak@northern.tech>
+---
+ include/configs/colibri_imx7_emmc.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/colibri_imx7_emmc.h b/include/configs/colibri_imx7_emmc.h
+index 39225143ca..b5cb9048ed 100644
+--- a/include/configs/colibri_imx7_emmc.h
++++ b/include/configs/colibri_imx7_emmc.h
+@@ -159,7 +159,7 @@
+ 		"fatload ${interface} 0:1 ${loadaddr} " \
+ 		"${board}/flash_blk.img && source ${loadaddr}\0" \
+ 	"splashpos=m,m\0" \
+-	"videomode=video=ctfb:x:640,y:480,depth:18,pclk:39722,le:48,ri:16,up:33,lo:10,hs:96,vs:2,sync:0,vmode:0\0" \
++	"videomode=video=ctfb:x:800,y:480,depth:18,pclk:39722,le:48,ri:16,up:33,lo:10,hs:96,vs:2,sync:0,vmode:0\0" \
+ 	"updlevel=2\0" \
+ 	"vidargs=video=mxsfb:800x480M-16@60,pixclockpol=1"
+ 
+-- 
+2.23.0
+

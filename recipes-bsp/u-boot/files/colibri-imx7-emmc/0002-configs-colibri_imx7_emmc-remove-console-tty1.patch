@@ -1,7 +1,7 @@
 From a27a1886d7b204e5571a3433551a9b4066a890ce Mon Sep 17 00:00:00 2001
 From: Mirza Krak <mirza.krak@northern.tech>
 Date: Tue, 15 Oct 2019 11:02:31 +0200
-Subject: [PATCH 2/3] configs: colibri_imx7_emmc: remove console=tty1
+Subject: [PATCH 2/4] configs: colibri_imx7_emmc: remove console=tty1
 
 Signed-off-by: Mirza Krak <mirza.krak@northern.tech>
 ---
