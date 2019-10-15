@@ -1,0 +1,26 @@
+From a27a1886d7b204e5571a3433551a9b4066a890ce Mon Sep 17 00:00:00 2001
+From: Mirza Krak <mirza.krak@northern.tech>
+Date: Tue, 15 Oct 2019 11:02:31 +0200
+Subject: [PATCH 2/3] configs: colibri_imx7_emmc: remove console=tty1
+
+Signed-off-by: Mirza Krak <mirza.krak@northern.tech>
+---
+ include/configs/colibri_imx7_emmc.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/colibri_imx7_emmc.h b/include/configs/colibri_imx7_emmc.h
+index 8b51f316b5..71466759df 100644
+--- a/include/configs/colibri_imx7_emmc.h
++++ b/include/configs/colibri_imx7_emmc.h
+@@ -152,7 +152,7 @@
+ 		"fatload ${interface} 1:1 ${loadaddr} " \
+ 		"${board}/flash_blk.img && source ${loadaddr}\0" \
+ 	"setup=setenv setupargs " \
+-		"console=tty1 console=${console}" \
++		"console=${console}" \
+ 		",${baudrate}n8 ${memargs} consoleblank=0\0" \
+ 	"setupdate=run setsdupdate || run setusbupdate || run setethupdate\0" \
+ 	"setusbupdate=usb start && setenv interface usb && " \
+-- 
+2.23.0
+

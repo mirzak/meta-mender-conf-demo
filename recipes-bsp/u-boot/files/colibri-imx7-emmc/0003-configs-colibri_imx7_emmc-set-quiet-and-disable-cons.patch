@@ -1,0 +1,27 @@
+From ab6a0c40c950508498fb32a991302a9f9f2d00f3 Mon Sep 17 00:00:00 2001
+From: Mirza Krak <mirza.krak@northern.tech>
+Date: Tue, 15 Oct 2019 11:03:14 +0200
+Subject: [PATCH 3/3] configs: colibri_imx7_emmc: set 'quiet' and disable
+ console cursor
+
+Signed-off-by: Mirza Krak <mirza.krak@northern.tech>
+---
+ include/configs/colibri_imx7_emmc.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/colibri_imx7_emmc.h b/include/configs/colibri_imx7_emmc.h
+index 71466759df..39225143ca 100644
+--- a/include/configs/colibri_imx7_emmc.h
++++ b/include/configs/colibri_imx7_emmc.h
+@@ -139,7 +139,7 @@
+ 	SD_BOOTCMD \
+ 	"boot_file=zImage\0" \
+ 	"console=ttymxc0\0" \
+-	"defargs=\0" \
++	"defargs=quiet vt.global_cursor_default=0\0" \
+ 	"fdt_board=eval-v3\0" \
+ 	"fdt_fixup=;\0" \
+ 	"m4boot=;\0" \
+-- 
+2.23.0
+
