@@ -1,0 +1,12 @@
+#!/bin/sh
+
+progress_end=$1
+
+if [ ${progress_end} -gt 100 ]; then
+    progress_end=100
+fi
+
+for progress in $(seq 1 ${progress_end}); do
+    psplash-write "PROGRESS ${progress}"
+    usleep $(( 1000 * 500 ))
+done

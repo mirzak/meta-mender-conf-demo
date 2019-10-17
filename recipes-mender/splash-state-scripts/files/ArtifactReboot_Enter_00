@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "$(mender -show-artifact): $(basename "$0") was called!" >&2
+
+psplash-write "Rebooting device..."
+usleep $(( 1000 * 100 ))
+psplash-write "PROGRESS 90"
+
+exit 0

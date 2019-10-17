@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "$(mender -show-artifact): $(basename "$0") was called!" >&2
+
+systemd-run psplash
+usleep $(( 1000 * 1 ))
+
+psplash-write "MSG Downloading Artifact..."
+usleep $(( 1000 * 100 ))
+
+systemd-run --unit mender-progressbar-mock mender-progressbar-mock 60
+
+exit 0
