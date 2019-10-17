@@ -1,6 +1,9 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI += "file://mender.service"
+SRC_URI += "\
+    file://mender.service \
+    file://artifact-verify-key.pem \
+"
 
 do_install_append() {
     install -d ${D}${systemd_unitdir}/system/
